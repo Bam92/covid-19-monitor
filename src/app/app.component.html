@@ -20,6 +20,48 @@
   
   </div>
 
+  <div>
+    <h1>World</h1>
+    <div class="cases">
+        <div class="wordlCase" id="confirmed" >
+          <div class="wordlCaseDetails">
+            <img src="../assets/img/confimed.svg" alt="sick person">
+            <div>
+                <p>Confirmed </p>
+                {{ corona.confirmed.value | json }}
+            </div>
+          </div>
+          <hr>
+          <p>Last update: {{ corona.lastUpdate }} </p>
+          </div>
+      
+          <div id="deaths" class="wordlCase">
+              <div class="wordlCaseDetails">
+                  <img src="../assets/img/deaths.svg" alt="died person">
+                  <div>
+                      <p>Deaths </p>
+                      {{ corona.deaths.value | json }}
+                  </div>
+              </div>           
+            <hr>
+            <p>Last update: {{ corona.lastUpdate }} </p>
+          </div>
+          <div id="recovered" class="wordlCase">
+              <div class="wordlCaseDetails">
+                  <img src="../assets/img/recovered.svg" alt="recovered person">
+                  <div>
+                      <p>Recovered </p>
+                      {{ corona.recovered.value  }}
+                  </div>
+              </div>  
+            
+            <hr>
+            <p>Last update: {{ corona.lastUpdate }} </p>
+          </div>
+    </div>
+    
+  </div>
+
 </div>
 
   
