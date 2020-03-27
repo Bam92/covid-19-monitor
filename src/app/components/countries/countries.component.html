@@ -1,0 +1,45 @@
+<div class="content" role="main">
+    <div>
+      <h1>Countries</h1>
+      <div class="cases" *ngFor="let country of countryInfo">
+          <div class="wordlCase" id="confirmed" >
+            <div class="wordlCaseDetails">
+              <img src="../assets/img/confimed.svg" alt="sick person">
+              <div>
+                  <p>Confirmed </p>
+                  {{ country.countryRegion }}:
+                  {{ country.confirmed | json }}
+              </div>
+            </div>
+            <hr>
+            <!-- <p>Last update: {{ corona.lastUpdate }} </p> -->
+            </div>
+        
+            <div id="deaths" class="wordlCase">
+                <div class="wordlCaseDetails">
+                    <img src="../assets/img/deaths.svg" alt="died person">
+                    <div>
+                        <p>Deaths </p>
+                        {{ country.deaths | json }}
+                    </div>
+                </div>           
+              <hr>
+              <!-- <p>Last update: {{ corona.lastUpdate }} </p> -->
+            </div>
+            <div id="recovered" class="wordlCase">
+                <div class="wordlCaseDetails">
+                    <img src="../assets/img/recovered.svg" alt="recovered person">
+                    <div>
+                        <p>Recovered </p>
+                        {{ country.recovered  }}
+                    </div>
+                </div>  
+              
+              <hr>
+              <!-- <p>Last update: {{ corona.lastUpdate }} </p> -->
+            </div>
+      </div>
+      
+    </div>
+  
+  </div>

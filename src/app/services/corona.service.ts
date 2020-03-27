@@ -14,6 +14,11 @@ export class CoronaService {
     return this.http
       .get('https://covid19.mathdro.id/api')
      }
+  
+  getCountries() {
+    return this.http
+      .get('https://covid19.mathdro.id/api/confirmed')
+     }
 
 
 }

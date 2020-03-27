@@ -1,0 +1,46 @@
+.cases {
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  
+  .wordlCase p {
+    
+    font-size: 16px;
+  }
+  
+  #deaths {
+    color: red;
+    border: 2px dotted red;
+  
+  }
+  
+  #recovered {
+    color: green;
+    border: 2px dotted green;
+  
+  }
+  
+  .wordlCase {
+    border: 2px solid #fff;
+    border-radius: 6px;
+    padding: .6em;
+    background: #fff;
+    margin-bottom: 1em;
+    font-size: 2em;
+    text-align: right;
+    line-height: 1.4em;
+    border: 2px dotted ;
+  
+  }
+  
+  .wordlCaseDetails {
+    display: flex;
+  }
+  
+  .wordlCaseDetails img {
+    height: 2.2em;
+    width: 2.2em;
+    margin-right: 2em;
+  }
+  

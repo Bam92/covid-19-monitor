@@ -1,0 +1,17 @@
+.header-title {
+    display: flex;
+    justify-content: center;
+}
+.header-title img {
+    width: 5em;
+    height: 5em;
+    margin-right: -1em;
+   
+}
+
+.header-title p {
+    background-color: #1976D2;
+    color: #fff;
+    padding: 1em;
+    border-radius: .2em;
+}       
