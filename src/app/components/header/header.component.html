@@ -1,5 +1,12 @@
 <!--App Title info-->
  <div class="header">  
+   <!-- Navigation bar -->
+   <nav>
+     <div class="navLinks">
+       <a [routerLink]="['']">World</a>
+       <a [routerLink]="['/countries']">Countries</a>
+     </div>
+   </nav>
    <div class="header-title">
     <img src="../../../assets/icons/covid-19.svg" alt="corona image">
     <p>{{ title }} </p>
