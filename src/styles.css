@@ -1,5 +1,11 @@
 /* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css?family=Gotu&display=swap');
+
 body {
-  background: powderblue;
-  
+  box-sizing: border-box;
+  background: rgb(245, 220, 220);
+  font-family: 'Gotu', sans-serif;  
 }
+
+
+

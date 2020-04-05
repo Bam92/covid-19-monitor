@@ -1,6 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
+import { RouterModule,
+         Router } from '@angular/router'
 
 import { AppComponent } from './app.component';
 import { ServiceWorkerModule } from '@angular/service-worker';
@@ -20,6 +22,10 @@ import { CountriesComponent } from './components/countries/countries.component';
     BrowserModule,
     HttpClientModule,
     ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production }),
+    RouterModule.forRoot([
+      { path: '', component: WorldComponent },
+      { path: 'countries', component: CountriesComponent }
+    ])
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,44 +1,55 @@
 <div class="content" role="main">
-    <div>
-      <h1>World</h1>
-      <div class="cases">
-          <div class="wordlCase" id="confirmed" >
-            <div class="wordlCaseDetails">
-              <img src="../assets/img/confimed.svg" alt="sick person">
-              <div>
-                  <p>Confirmed </p>
-                  {{ corona.confirmed.value | json }}
-              </div>
+  <header>
+    <h2>The global situation </h2>
+    <p>Last updated at {{ corona.lastUpdate | date: 'medium' }}</p>
+  </header>
+
+  <div class="cases">
+    <!-- Confirmed cases -->
+      <div class="caseInfo" id="confirmed" >
+        <div class="caseInfo_number">
+            <span class="this-number">{{ corona.confirmed.value | number:'2.'  }}</span>
+        </div>
+        <hr>
+        <div class="caseInfo_name">
+          <h3>Confirmed</h3> 
+        </div>
+
+        </div>
+      <!-- Number of death -->
+        <div id="deaths" class="caseInfo">
+            <div class="caseInfo_number">
+                <span class="this-number">{{ corona.deaths.value  | number:'2.' }} </span>
+                <small>({{ (corona.deaths.value / corona.confirmed.value * 100).toFixed(2) }}%)</small> 
+            </div>           
+          <hr>
+          <div class="caseInfo_name">
+              <h3>Deaths</h3>
             </div>
-            <hr>
-            <p>Last update: {{ corona.lastUpdate }} </p>
+        </div>
+          <!-- Recovered cases -->
+        <div id="recovered" class="caseInfo">
+            <div class="caseInfo_number">
+                <span class="this-number">{{ corona.recovered.value | number:'2.' }} </span>
+                <small>({{ (corona.recovered.value / corona.confirmed.value * 100).toFixed(2) }}%)</small> 
+            </div>  
+          <hr>
+          <div class="caseInfo_name">
+              <h3>Recovered</h3> 
             </div>
-        
-            <div id="deaths" class="wordlCase">
-                <div class="wordlCaseDetails">
-                    <img src="../assets/img/deaths.svg" alt="died person">
-                    <div>
-                        <p>Deaths </p>
-                        {{ corona.deaths.value | json }}
-                    </div>
-                </div>           
-              <hr>
-              <p>Last update: {{ corona.lastUpdate }} </p>
-            </div>
-            <div id="recovered" class="wordlCase">
-                <div class="wordlCaseDetails">
-                    <img src="../assets/img/recovered.svg" alt="recovered person">
-                    <div>
-                        <p>Recovered </p>
-                        {{ corona.recovered.value  }}
-                    </div>
-                </div>  
-              
-              <hr>
-              <p>Last update: {{ corona.lastUpdate }} </p>
-            </div>
-      </div>
-      
-    </div>
-  
+        </div>
+  </div>
+  </div>
+
+  <!-- To be put in a new component -->
+
+  <div class="country">
+      <header>
+          <h2>The situation by country </h2>
+          <p>Last updated at {{ corona.lastUpdate | date: 'medium' }}</p>
+        </header>
+
+        <div>
+          coming soon
+        </div>
   </div>

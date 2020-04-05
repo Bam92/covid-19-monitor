@@ -1,46 +1,71 @@
+/* The header styles */
+
+header {
+  color: #fff;
+  background-color: #130F41;
+  transform: rotate(-2deg);
+  padding: .1em 1em;
+  width: 20em;
+  text-align: center;
+  margin: auto;
+}
+
 .cases {
-    display: flex;
-    justify-content: space-around;
+  display: flex;
+  justify-content: space-around;
+  background: rgb(52, 60, 203);
+  border-radius: 10px;
+  padding: 1.5em;
+  width: 45em;
+  margin: auto;
+}
+  
+#deaths {
+  color: red;
+}
+
+#recovered {
+  color: green;
+
+}
+  
+.caseInfo {
+  border-radius: 7px;
+  padding: 0.7em;
+  background: #fff;
+  text-align: center;
+  width: 12em;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.06),0 2px 6px;
+
+}
+
+.caseInfo_name {
+  font-variant: small-caps;
+}
+
+.this-number {
+  font-size: 2em;
+
+}
+
+  /* This will be removed */
+  .country{
+    margin-top: 4em;
+    text-align: center;
   }
-  
-  
-  .wordlCase p {
-    
-    font-size: 16px;
+
+  /* Responsive design */
+  @media screen and (min-width: 200px) and (max-width: 640px) {
+    header,
+    .cases,
+    .caseInfo {
+      width: auto;
+    }
+    .cases {
+      flex-direction: column;
+    }
+
+    .caseInfo {
+      margin-bottom: 2em;
+    }
   }
-  
-  #deaths {
-    color: red;
-    border: 2px dotted red;
-  
-  }
-  
-  #recovered {
-    color: green;
-    border: 2px dotted green;
-  
-  }
-  
-  .wordlCase {
-    border: 2px solid #fff;
-    border-radius: 6px;
-    padding: .6em;
-    background: #fff;
-    margin-bottom: 1em;
-    font-size: 2em;
-    text-align: right;
-    line-height: 1.4em;
-    border: 2px dotted ;
-  
-  }
-  
-  .wordlCaseDetails {
-    display: flex;
-  }
-  
-  .wordlCaseDetails img {
-    height: 2.2em;
-    width: 2.2em;
-    margin-right: 2em;
-  }
-  
