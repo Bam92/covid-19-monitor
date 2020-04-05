@@ -1,7 +1,9 @@
 .header-title {
     display: flex;
     justify-content: center;
+    align-items: center;
 }
+
 .header-title img {
     width: 5em;
     height: 5em;
@@ -9,16 +11,13 @@
    
 }
 
-.header-title p {
-    background-color: #1976D2;
+.header-title h1 {
     color: #fff;
     padding: 1em;
     border-radius: .2em;
 }       
 
-/* Navigation Layout */
-.navLinks {
-    display: flex;
-    justify-content: space-around;
- 
+
+@media screen and (min-width: 200px) and (max-width: 640px) {
+    
 }
