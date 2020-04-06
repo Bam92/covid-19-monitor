@@ -7,5 +7,14 @@ body {
   font-family: 'Gotu', sans-serif;  
 }
 
-
+/* Shared style for world and countries */
+header {
+  color: #fff;
+  background-color: #130F41;
+  transform: rotate(-2deg);
+  padding: .1em 1em;
+  width: 20em;
+  text-align: center;
+  margin: auto;
+}
 
