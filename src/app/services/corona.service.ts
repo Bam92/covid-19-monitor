@@ -11,8 +11,14 @@ export class CoronaService {
   ) { }
 
   getAll() {
-    return this.http
+    try {
+      return this.http
       .get('https://covid19.mathdro.id/api')
+    } catch (e) {
+      console.log(`Failed to fetch data: ${e.message}`, e);
+      return;
+    }
+    
      }
   
   getCountries() {

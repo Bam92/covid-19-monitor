@@ -19,9 +19,13 @@ export class WorldComponent implements OnInit {
   ngOnInit() {
     this.coronaService.getAll().subscribe((response) => {
       this.corona = response;
+      
     }, err => {
       console.log('Error', err);
     });
+    console.log('test', this.corona);
   }
+
+  
 
 }

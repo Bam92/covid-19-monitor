@@ -1,46 +1,38 @@
+.content {
+  margin-top: 3em;
+}
+
 .cases {
-    display: flex;
-    justify-content: space-around;
-  }
+  display: flex;
+  justify-content: space-around;
+  margin-top: 2em;
+
+}
+
+
+.wordlCase p {
   
+  font-size: 16px;
+}
   
-  .wordlCase p {
-    
-    font-size: 16px;
-  }
-  
-  #deaths {
-    color: red;
-    border: 2px dotted red;
-  
-  }
-  
-  #recovered {
-    color: green;
-    border: 2px dotted green;
-  
-  }
-  
-  .wordlCase {
-    border: 2px solid #fff;
-    border-radius: 6px;
-    padding: .6em;
-    background: #fff;
-    margin-bottom: 1em;
-    font-size: 2em;
-    text-align: right;
-    line-height: 1.4em;
-    border: 2px dotted ;
-  
-  }
-  
-  .wordlCaseDetails {
-    display: flex;
-  }
-  
-  .wordlCaseDetails img {
-    height: 2.2em;
-    width: 2.2em;
-    margin-right: 2em;
-  }
-  
+#deaths {
+  color: red;
+  border: 2px solid red;
+
+}
+
+#recovered {
+  color: green;
+  border: 2px solid green;
+
+}
+
+.wordlCase {
+  border-radius: 6px;
+  padding: .8em;
+  background: #fff;
+  margin-bottom: 1em;
+  line-height: 1.4em;
+  width: 15em;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.06),0 2px 6px;
+}

@@ -1,46 +1,37 @@
 <div class="content" role="main">
-    <div>
-      <h1>Countries</h1>
-      <div class="cases" *ngFor="let country of countryInfo">
+    <header>
+        <h2>Situation by country </h2>
+        <!-- <p>Last updated at {{ country.lastUpdate | date: 'medium' }}</p> -->
+      </header>
+    
+      <div class="cases" >
           <div class="wordlCase" id="confirmed" >
-            <div class="wordlCaseDetails">
-              <img src="../assets/img/confimed.svg" alt="sick person">
+            <h3>Confirmed</h3>
+            <div class="wordlCaseDetails" *ngFor="let country of countryInfo">
               <div>
-                  <p>Confirmed </p>
-                  
-                  {{ country.confirmed | json }}
+                {{ country.confirmed }} - {{ country.countryRegion }} <hr> <br>
               </div>
+            </div>            
+          </div>
+
+          <!-- Deaths situation -->
+          <div class="wordlCase" id="deaths">
+              <h3>Deaths</h3>
+              <div class="wordlCaseDetails" *ngFor="let country of countryInfo">
+                <div>
+                  {{ country.deaths }} - {{ country.countryRegion }} <hr> <br>
+                </div>
+              </div>            
             </div>
-            <hr>
-            <!-- <p>Last update: {{ corona.lastUpdate }} </p> -->
-            {{ country.countryRegion }}
-            </div>
-        
-            <div id="deaths" class="wordlCase">
-                <div class="wordlCaseDetails">
-                    <img src="../assets/img/deaths.svg" alt="died person">
-                    <div>
-                        <p>Deaths </p>
-                        {{ country.deaths | json }} ({{ country.deaths / country.confirmed  * 100 }})
-                    </div>
-                </div>           
-              <hr>
-              <!-- <p>Last update: {{ corona.lastUpdate }} </p> -->
-            </div>
-            <div id="recovered" class="wordlCase">
-                <div class="wordlCaseDetails">
-                    <img src="../assets/img/recovered.svg" alt="recovered person">
-                    <div>
-                        <p>Recovered </p>
-                        {{ country.recovered  }}
-                    </div>
-                </div>  
-              
-              <hr>
-              <!-- <p>Last update: {{ corona.lastUpdate }} </p> -->
+
+            <!-- Recovered situation -->
+          <div class="wordlCase" id="recovered">
+              <h3>Recovered</h3>
+              <div class="wordlCaseDetails" *ngFor="let country of countryInfo">
+                <div>
+                  {{ country.recovered }} - {{ country.countryRegion }} <hr> <br>
+                </div>
+              </div>            
             </div>
       </div>
-      
-    </div>
-  
   </div>
