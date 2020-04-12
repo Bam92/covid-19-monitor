@@ -4,6 +4,15 @@
   margin-right: auto;
 }
 
+.container div {
+  width: 100em;
+	height: 100em;
+  background-color: #39cccc;
+  /* background-size: cover; */
+  clip-path: polygon(40% 100%, 100% 100%, 100% 50%, 40% 80%);
+  background: green;
+}
+
 /* Responsive design */
 @media screen and (min-width: 200px) and (max-width: 640px) {
   .container {

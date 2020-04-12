@@ -10,13 +10,15 @@ import { environment } from '../environments/environment';
 import { HeaderComponent } from './components/header/header.component';
 import { WorldComponent } from './components/world/world.component';
 import { CountriesComponent } from './components/countries/countries.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     WorldComponent,
-    CountriesComponent
+    CountriesComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
