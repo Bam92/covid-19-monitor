@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { HttpClient, HttpErrorResponse } from '@angular/common/http';
+import { HttpClient } from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root'
@@ -26,5 +26,14 @@ export class CoronaService {
       .get('https://covid19.mathdro.id/api/confirmed')
      }
 
+  getCountryRecovered() {
+    return this.http
+      .get('https://covid19.mathdro.id/api/recovered')
+    }    
+
+  getCountriesDeaths() {
+    return this.http
+      .get('https://covid19.mathdro.id/api/deaths')
+      }
 
 }

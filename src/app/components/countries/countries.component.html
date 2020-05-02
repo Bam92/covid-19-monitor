@@ -27,7 +27,10 @@
             <!-- Recovered situation -->
           <div class="wordlCase" id="recovered">
               <h3>Recovered</h3>
-              <div class="wordlCaseDetails" *ngFor="let country of countryInfo">
+              <div 
+                class="wordlCaseDetails" 
+                *ngFor="let country of CountryInfoRecovered"
+              >
                 <div>
                   {{ country.recovered }} - {{ country.countryRegion }} <hr> <br>
                 </div>
