@@ -24,7 +24,7 @@ export class CountriesComponent implements OnInit {
     by: mplungjan
      */
     // Confirmed Cases
-    this.coronaService.getCountries().subscribe((response) => {
+    this.coronaService.getCountries().subscribe((response: any[]) => {
       this.countryInfo = response.reduce((accumulator, cur) => {
         let country = cur.countryRegion;
         let found = accumulator.find(elem => elem.countryRegion === country)
@@ -41,12 +41,12 @@ export class CountriesComponent implements OnInit {
       
     });
 
-    // Recovered cases
-    this.coronaService.getCountryRecovered().subscribe(response => {
+    //Recovered cases
+    this.coronaService.getCountryRecovered().subscribe((response: any[]) => {
       this.CountryInfoRecovered = response.reduce((accumulator, cur) => {
         let country = cur.countryRegion;
         let found = accumulator
-                        .find(elem => elem.countryRegion === country)
+                      .find(elem => elem.countryRegion === country)
         
         if (found) found.deaths += cur.deaths;        
         else accumulator.push(cur);
@@ -60,7 +60,7 @@ export class CountriesComponent implements OnInit {
     });
 
     // Deaths info
-    this.coronaService.getCountriesDeaths().subscribe(response => {
+    this.coronaService.getCountriesDeaths().subscribe((response: any[]) => {
       this.CountryInfoDeaths = response.reduce((accumulator, cur) => {
         let country = cur.countryRegion;
         let found = accumulator
